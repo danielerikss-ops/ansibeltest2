@@ -1,0 +1,11 @@
+- hosts: all
+  become: true
+  tasks:
+
+    - name: update repository index
+      dnf: 
+        update_cache: yes
+    - name: install tree package
+      dnf:
+        name: tree  
+        state: latest  
